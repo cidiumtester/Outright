@@ -1447,7 +1447,6 @@ header {
 .info-affiliates ul li {
   list-style: none;
   color: #fff;
-  font-size: 20px;
 }
 
 .info-affiliates-large ul li a {
@@ -1466,6 +1465,7 @@ header {
 
 .affiliatesEspacio {
   padding: 30px 0 10px 0;
+  font-size: 22px;
 }
 /* Affiliates */
 
