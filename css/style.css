@@ -3,31 +3,22 @@
 }
 body {
   margin: 0;
+  font-family: "Lato";
 }
 
 /* Menu */
 
-/* Menu */
-.newMenu {
-  display: flex;
-  padding-left: 12vw;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
+header {
+  position: fixed;
+  width: 100%;
 }
-
-.newMenu li {
-  padding: 0 5px;
-}
-
 #menu ul {
   list-style: none;
-  margin: 0;
 }
 
 #menu ul a {
   display: block;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 10px;
 }
@@ -38,25 +29,154 @@ body {
 #menu ul ul {
   display: none;
   position: absolute;
-  top: 100%;
+  margin: 0;
   left: 0;
-
-  padding: 0;
+  padding: 10px 0;
 }
+
+
 #menu ul ul li {
   float: none;
-  width: 250px;
+  width: 150px;
 }
 #menu ul ul a {
-  line-height: 120%;
-  padding: 10px 15px;
+  line-height: 100%;
+  padding: 20px 10px;
 }
+
 #menu ul li:hover > ul {
   display: block;
 }
+
+#menu,
+.iconos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#menu ul li {
+  float: left;
+}
+
+#menu li a {
+  color: #fff;
+  padding: 0px 10px;
+  text-decoration: none;
+}
+
+.iconos {
+  list-style: none;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.iconos li {
+  padding: 10px 0px;
+  margin: 0;
+}
+
+.menu {
+  display: grid;
+  /*grid-template-columns: repeat(3, auto);*/
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.redes-sociales {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+
+.submenus {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.submenu1 ul,
+.submenu3 ul {
+  margin: 40px 0 0 0;
+}
+
+.submenu1 ul,
+.submenu3 ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.textos {
+  display: grid;
+  grid-template-columns: auto 200px auto;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.submenu1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.submenu2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.submenu2 img {
+  width: 200px;
+  height: auto;
+}
+
+.submenu3 {
+  grid-column: 3;
+  grid-row: 1;
+  padding-right: 11px;
+}
+.button {
+  background: url(../img/boton-background-image.png);
+  background-size: cover;
+  color: blue;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-top: 9px;
+  border-radius: 30px;
+}
+
+.redes-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.redes-element li {
+  margin: 15px 0 15px 0;
+}
+
+/* Menu */
+
 /* Video */
 
-.fullscreen-bg {
+.overlay {
+  background-image: linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: .70;
+
+}
+
+.fullscreen-bg { 
   position: fixed;
   top: 0;
   width: 100%;
@@ -83,7 +203,7 @@ body {
 /* Header */
 
 .banner {
-  height: 680px;
+  height: 100vh;
 }
 
 .container-flecha {
@@ -102,14 +222,13 @@ body {
   height: 200px;
 }
 
+.scrolly {
+  color: #fff;
+}
 .logo {
   grid-column: 1;
   grid-row: 2;
   justify-self: center;
-}
-
-.logo img {
-  padding: 0 0 0 120px;
 }
 
 .item-flecha {
@@ -136,55 +255,6 @@ body {
   width: 80%;
   max-width: 1280px;
   margin: auto;
-}
-
-.menu,
-.iconos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.menu {
-  padding-left: 5vw;
-}
-.menu ul li {
-  float: left;
-}
-
-.iconos-header {
-  font-size: 30px;
-}
-
-.iconos li a,
-.item-flecha a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu li a {
-  color: #fff;
-  font-size: 20px;
-  padding: 0px 25px;
-  text-decoration: none;
-}
-
-.iconos {
-  list-style: none;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.iconos li {
-  padding: 10px 0px;
-  margin: 0;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Flecha */
@@ -225,13 +295,10 @@ body {
 }
 .events {
   height: 100%;
-  background-image: url("../img/Contact_Us.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
+  background-size: 100%;
 }
 
 .item-imagen1 {
@@ -280,6 +347,8 @@ body {
 .info {
   height: 100%;
   background: url("../img/DJs.jpg");
+  background-color: #229bf4;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -332,7 +401,9 @@ body {
 
 /* Footer */
 #footer {
-  background-color: black;
+  background-image: url("/img/footer-background-image.png");
+  background-size: cover;
+  background-position: 50% 100%;
   padding: 100px 0 0 0;
 }
 
@@ -345,38 +416,56 @@ body {
 .item-footer1 {
   grid-column: 1;
   grid-row: 1 / 4;
+  justify-self: center;
 }
 .item-footer2 {
   grid-column: 2;
   grid-row: 1;
+  justify-self: center;
 }
 .item-footer3 {
   grid-column: 3;
   grid-row: 1;
+  justify-self: center;
 }
 .item-footer4 {
   grid-column: 4;
   grid-row: 1;
+  justify-self: center;
 }
 .item-footer5 {
   grid-column: 5;
   grid-row: 1;
+  justify-self: center;
 }
 .item-footer6 {
   grid-column: 6;
   grid-row: 1/ 4;
+  justify-self: center;
 }
 .item-footer7 {
   grid-column: 2;
   grid-row: 3 / 2;
-}
-
-.item-footer8 {
-  grid-column: 3 / 5;
-  grid-row: 1 / 3;
   justify-self: center;
 }
 
+.item-footer8 {
+  grid-column: 3;
+  grid-row: 3/ 2;
+  justify-self: center;
+}
+
+.item-footer9 {
+  grid-column: 4;
+  grid-row: 3/ 2;
+  justify-self: center;
+}
+
+.item-footer10 {
+  grid-column: 5;
+  grid-row: 3/ 2;
+  justify-self: center;
+}
 .container-footer2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -385,6 +474,28 @@ body {
   width: 90%;
   max-width: 1280px;
   margin: auto;
+}
+
+.item-contacto {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.item-contacto2 {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.item-contacto3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item-contacto3 img {
+  width: 200px;
 }
 
 .iconos-contacto li {
@@ -403,6 +514,11 @@ body {
   align-items: center;
 }
 
+.botones a {
+  text-decoration: none;
+  margin: 15px;
+}
+
 .item-infoFooter {
   grid-column: 1 / 4;
   grid-row: 2;
@@ -419,8 +535,15 @@ body {
 /* Footer */
 
 .about {
-  height: 100%;
-  background: url("../img/DJs.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/DJs.jpg") fixed center, linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -443,13 +566,18 @@ body {
 .item-espacioAbout {
   grid-column: 1;
   grid-row: 1;
-  height: 300px;
+  height: 500px;
 }
 
 .item-about {
   grid-column: 1;
   grid-row: 2;
   text-align: center;
+}
+
+.item-about h1 {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .item-texto li {
@@ -472,7 +600,9 @@ body {
 
 .experience {
   height: 100%;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png");
+  background-blend-mode: multiply;
+  background-color: #5000bc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -507,8 +637,15 @@ body {
 /* About */
 
 .music-container {
-  height: 100%;
-  background: url("../img/Music_Database.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/Music_Database.jpg") fixed center, linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -546,8 +683,15 @@ body {
 /* Corporate and social */
 
 .corp-container {
-  height: 100%;
-  background: url("../img/corpandsocial.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/corpandsocial.jpg") fixed center , linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -572,7 +716,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   height: 700px;
   width: 100%;
   -webkit-background-size: cover;
@@ -613,8 +759,15 @@ body {
 /*Personalized wedding */
 
 .wedding-container {
-  height: 100%;
-  background: url("../img/Personalized_Weddings.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/Personalized_Weddings.jpg") fixed center , linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -625,7 +778,7 @@ body {
 
 .img-wedding {
   background: url("../img/Wedding-7.jpg");
-  height: 100%;
+  height: 100vh;
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -664,8 +817,15 @@ body {
 /* Service school */
 
 .school-container {
-  height: 100%;
-  background: url("../img/Community_and_School_Dances.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/Community_and_School_Dances.jpg") fixed center , linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -696,7 +856,14 @@ body {
 .service-container {
   padding: 50px 0;
   height: 100%;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png"), linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -706,8 +873,15 @@ body {
 }
 
 .effects-container {
-  height: 100%;
-  background: url("../img/Uplighting_and_Special_Effects.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/Uplighting_and_Special_Effects.jpg") fixed center , linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -809,8 +983,15 @@ body {
 
 /* Performer service */
 .performer {
-  height: 100%;
-  background: url("../img/Performers.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/Performers.jpg") fixed center , linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -822,7 +1003,9 @@ body {
 .performer-container {
   padding: 100px 0px;
   height: 100%;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -948,7 +1131,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png") , linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   height: 900px;
   width: 100%;
   -webkit-background-size: cover;
@@ -1002,9 +1192,16 @@ body {
 
 /* Photobooth */
 .photobooth {
-  height: 100%;
+  height: 100vh;
   background: url("../img/Photobooth_and_Projector_Screen_Service.jpg") fixed
-    center;
+    center , linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
+    background-color: #5000bc;
+    background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1015,7 +1212,9 @@ body {
 
 .photobooth-container {
   height: 100%;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1082,8 +1281,15 @@ body {
 
 /* Review */
 .review {
-  height: 100%;
-  background: url("../img/Reviews.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/Reviews.jpg") fixed center, linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1094,7 +1300,9 @@ body {
 
 .review-container {
   height: 100%;
-  background: url("../img/Contact_Us.jpg");
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1170,8 +1378,15 @@ body {
 
 /* Affiliates */
 .affiliates {
-  height: 100%;
-  background: url("../img/Contact_Us.jpg") fixed center;
+  height: 100vh;
+  background-image: url("../img/Contact_Us.jpg"),
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1182,13 +1397,10 @@ body {
 
 .affiliates-container {
   height: 100%;
-  background: url("../img/Contact_Us.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
+  background-size: 100%;
 }
 
 .item-affiliates {
@@ -1260,8 +1472,15 @@ body {
 /* Contacto */
 
 .contacto {
-  height: 100%;
-  background: url("../img/affiliates2.jpg") fixed center;
+  height: 100vh;
+  background: url("../img/affiliates2.jpg") fixed center, linear-gradient(
+    to top right,
+    rgba(69, 0, 255),
+    rgba(246, 0, 125),
+    rgba(164, 0, 162)
+  );
+  background-blend-mode: multiply;
+  background-color: #5000bc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1271,8 +1490,10 @@ body {
 }
 
 .contacto-container {
-  height: 100%;
-  background: url("../img/Contact_Us.jpg");
+  height: 700px;
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1281,12 +1502,8 @@ body {
   background-size: cover;
 }
 
-.item-contacto {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  width: 80%;
+.item-contactanos {
+  width: 70%;
   max-width: 1280px;
   margin: auto;
 }
@@ -1298,6 +1515,7 @@ body {
   justify-self: center;
   place-self: center;
   text-align: center;
+  padding: 50px 0;
 }
 
 .form-contacto {
@@ -1452,3 +1670,25 @@ input[type="submit"] {
 }
 
 /* Contacto */
+
+
+/* */
+.textWithPhoto {
+  height: 100%;
+  background: url("../img/hero-affiliates-2.png");
+  background-color: #5000bc;
+  background-blend-mode: multiply;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.item-texto {
+  width: 80%;
+  max-width: 1280px;
+  margin: auto;
+}
