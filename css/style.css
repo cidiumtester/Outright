@@ -53,11 +53,11 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 #menu ul li {
   float: left;
+  
 }
 
 #menu li a {
@@ -84,6 +84,7 @@ header {
   grid-template-columns: 200px auto;
   grid-auto-rows: minmax(100px, auto);
 }
+
 
 .redes-sociales {
   grid-column: 1;
