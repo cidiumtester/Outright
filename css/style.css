@@ -87,9 +87,9 @@ header {
 
 
 .redes-sociales {
-  grid-column: 1;
-  grid-row: 1/3;
+  position: fixed;
 }
+
 
 .submenus {
   grid-column: 2;
@@ -150,6 +150,7 @@ header {
 .redes-element {
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
 
 .redes-element li {
