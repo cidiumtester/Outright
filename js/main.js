@@ -14,6 +14,5 @@ $(document).ready(function() {
 });
 
 var video = document.getElementById('video');
-video.src = "img/main2.mp4";
 video.load();
 console.log("Video is on load");
