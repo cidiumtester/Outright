@@ -17,20 +17,7 @@
       DJ Services Calgary: OUTRIGHT ENTERTAINMENT Wedding DJ Calgary, Alberta
     </title>
 
-    <!--Transition-->
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
-    ></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("body").hide();
-        $("body").fadeIn(500);
-      });
-    </script>
-    <!--Transition-->
-
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
       rel="stylesheet"
@@ -40,9 +27,14 @@
     <section class="banner">
       <div class="overlay"></div>
       <div class="fullscreen-bg">
-        <video autoplay loop preload="auto" class="fullscreen-bg_video">
-          <source src="img/main2.mp4" type="video/mp4" />
-        </video>
+        <video
+          id="video"
+          src="img/main2.mp4"
+          autoplay
+          loop
+          preload="metadata"
+          class="fullscreen-bg_video"
+        ></video>
       </div>
 
       <header>
@@ -198,7 +190,7 @@
             Live Performers, and Photobooths for special events and weddings in
             Calgary and surrounding areas.
           </p>
-          <a href="">More about us</a>
+          <a href="about.html">More about us</a>
         </div>
       </div>
     </section>
@@ -289,6 +281,10 @@
       </section>
     </footer>
     <!--Scripts-->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    ></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://kit.fontawesome.com/80563c1025.js"></script>
     <script src="js/main.js"></script>
