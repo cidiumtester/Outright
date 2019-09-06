@@ -34,7 +34,6 @@ header {
   padding: 10px 0;
 }
 
-
 #menu ul ul li {
   float: none;
   width: 150px;
@@ -57,7 +56,6 @@ header {
 
 #menu ul li {
   float: left;
-  
 }
 
 #menu li a {
@@ -85,11 +83,9 @@ header {
   grid-auto-rows: minmax(100px, auto);
 }
 
-
 .redes-sociales {
   position: fixed;
 }
-
 
 .submenus {
   grid-column: 2;
@@ -174,11 +170,10 @@ header {
   width: 100%;
   position: absolute;
   z-index: -1;
-  opacity: .70;
-
+  opacity: 0.7;
 }
 
-.fullscreen-bg { 
+.fullscreen-bg {
   position: fixed;
   top: 0;
   width: 100%;
@@ -530,20 +525,27 @@ header {
 .item-infoFooter ul li {
   color: #fff;
   list-style: none;
+
   float: left;
   padding: 0px 20px;
+}
+
+.item-infoFooter ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Footer */
 
 .about {
   height: 100vh;
-  background: url("../img/DJs.jpg") fixed center, linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/DJs.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -640,12 +642,13 @@ header {
 
 .music-container {
   height: 100vh;
-  background: url("../img/Music_Database.jpg") fixed center, linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/Music_Database.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -686,12 +689,13 @@ header {
 
 .corp-container {
   height: 100vh;
-  background: url("../img/corpandsocial.jpg") fixed center , linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/corpandsocial.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -762,12 +766,13 @@ header {
 
 .wedding-container {
   height: 100vh;
-  background: url("../img/Personalized_Weddings.jpg") fixed center , linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/Personalized_Weddings.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -820,12 +825,13 @@ header {
 
 .school-container {
   height: 100vh;
-  background: url("../img/Community_and_School_Dances.jpg") fixed center , linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/Community_and_School_Dances.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -858,12 +864,13 @@ header {
 .service-container {
   padding: 50px 0;
   height: 100%;
-  background: url("../img/hero-affiliates-2.png"), linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/hero-affiliates-2.png"),
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -876,12 +883,13 @@ header {
 
 .effects-container {
   height: 100vh;
-  background: url("../img/Uplighting_and_Special_Effects.jpg") fixed center , linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/Uplighting_and_Special_Effects.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -986,12 +994,13 @@ header {
 /* Performer service */
 .performer {
   height: 100vh;
-  background: url("../img/Performers.jpg") fixed center , linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/Performers.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -1133,12 +1142,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../img/hero-affiliates-2.png") , linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/hero-affiliates-2.png"),
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   height: 900px;
@@ -1196,14 +1206,15 @@ header {
 .photobooth {
   height: 100vh;
   background: url("../img/Photobooth_and_Projector_Screen_Service.jpg") fixed
-    center , linear-gradient(
+      center,
+    linear-gradient(
       to top right,
       rgba(69, 0, 255),
       rgba(246, 0, 125),
       rgba(164, 0, 162)
     );
-    background-color: #5000bc;
-    background-blend-mode: multiply;
+  background-color: #5000bc;
+  background-blend-mode: multiply;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1284,12 +1295,13 @@ header {
 /* Review */
 .review {
   height: 100vh;
-  background: url("../img/Reviews.jpg") fixed center, linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/Reviews.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-color: #5000bc;
   background-blend-mode: multiply;
   -webkit-background-size: cover;
@@ -1475,12 +1487,13 @@ header {
 
 .contacto {
   height: 100vh;
-  background: url("../img/affiliates2.jpg") fixed center, linear-gradient(
-    to top right,
-    rgba(69, 0, 255),
-    rgba(246, 0, 125),
-    rgba(164, 0, 162)
-  );
+  background: url("../img/affiliates2.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
   background-blend-mode: multiply;
   background-color: #5000bc;
   -webkit-background-size: cover;
@@ -1518,6 +1531,13 @@ header {
   place-self: center;
   text-align: center;
   padding: 50px 0;
+}
+
+.correo-contacto a {
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  
 }
 
 .form-contacto {
@@ -1673,7 +1693,6 @@ input[type="submit"] {
 
 /* Contacto */
 
-
 /* */
 .textWithPhoto {
   height: 100%;
@@ -1686,7 +1705,6 @@ input[type="submit"] {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 .item-texto {
