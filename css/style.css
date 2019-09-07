@@ -486,6 +486,11 @@ header {
   align-self: center;
 }
 
+.item-contacto2 a img {
+  width: 120px;
+  margin: 30px;
+}
+
 .item-contacto3 {
   grid-column: 3;
   grid-row: 1;
@@ -1537,7 +1542,6 @@ header {
   color: #fff;
   list-style: none;
   text-decoration: none;
-  
 }
 
 .form-contacto {
@@ -1712,3 +1716,80 @@ input[type="submit"] {
   max-width: 1280px;
   margin: auto;
 }
+
+/* Photos section */
+
+.photo-container {
+  height: 100vh;
+  background: url("../img/photos.jpg") fixed center,
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery {
+  padding: 50px 0;
+  height: 100%;
+  background: url("../img/hero-affiliates-2.png"),
+    linear-gradient(
+      to top right,
+      rgba(69, 0, 255),
+      rgba(246, 0, 125),
+      rgba(164, 0, 162)
+    );
+  background-color: #5000bc;
+  background-blend-mode: multiply;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#galeria {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 960px;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  column-count: 5;
+
+  /* Espacio entre columnas */
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.item-galeria img {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 0 0 20px 0;
+  text-align: center;
+  max-width: 100%;
+  
+
+  /*Evitamos que se corte al cambiar de columna*/
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.item-galeria img {
+  width: 200px;
+  height: 100%;
+  margin: 20px;
+}
+
+/* Photos section */
