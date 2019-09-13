@@ -81,6 +81,7 @@ header {
   display: grid;
   grid-template-columns: 200px auto;
   grid-auto-rows: minmax(100px, auto);
+  background-color: hsla(301, 100%, 32%, 0.7);
 }
 
 .redes-sociales {
