@@ -32,6 +32,7 @@ header {
   margin: 0;
   left: 0;
   padding: 10px 0;
+  width: 180px;
 }
 
 #menu ul ul li {
@@ -81,7 +82,7 @@ header {
   display: grid;
   grid-template-columns: 200px auto;
   grid-auto-rows: minmax(100px, auto);
-  background-color: hsla(301, 100%, 32%, 0.7);
+  background-color: hsla(301, 100%, 32%, 1);
 }
 
 .redes-sociales {
@@ -96,6 +97,10 @@ header {
 .submenu1 ul,
 .submenu3 ul {
   margin: 40px 0 0 0;
+}
+
+.submenu1 ul ul {
+  background-color: hsla(301,100%,32%,0.7);
 }
 
 .submenu1 ul,
@@ -153,6 +158,8 @@ header {
 .redes-element li {
   margin: 15px 0 15px 0;
 }
+
+
 
 /* Menu */
 
